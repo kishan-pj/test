@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    font-family: 'poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    color:#ffff;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    z-index: 10000;
+    cursor: pointer;
+
+}
+.logo{
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.logo i{
+    padding: 0.5rem;
+}
+
+.logo h1{
+    display: inline;
+    
+}
+
+.logo :hover{
+    text-decoration: none;
+}
+
+.left .fa-shopping-cart{
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
+.search-container{
+    display: inline;
+    position: relative;
+}
+
+#search{
+    position: absolute;
+    top: -1.5rem;
+    right: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+}
+#search:hover,
+#search:focus{
+    width: 25rem;
+
+}
+.search-container .fa-search{
+    position: absolute;
+    top: -7rem;
+    left: -3.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    color: #333;
+}
+.search-container :hover ~ #search{
+    width: 25rem;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.9);
+    padding: 0;
+    display: none;
+
+}
+.navbar ul{
+    height: 100%;
+    width: 35rem;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    list-style: none;
+}
+.navbar li{
+    margin: .5rem 0;
+}
+.navbar a{
+    display: block;
+    height: 4rem;
+    width: 25rem;
+    background: #fff;
+    color: #333;
+    border-radius: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 4rem;
+    text-decoration: none;
+}
+.navbar a:hover{
+    text-decoration: none;
+    background: red;
+    letter-spacing: .5rem;
+    color:#fff;
+
+}
+
+#home{
+    min-height: 100vh;
+    width: 100vw;
+    background:#333;
+}
+

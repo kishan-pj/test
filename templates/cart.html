@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+
+<head>
+    <title>Make Yourself Stylist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS File -->
+    <!-- <link rel="stylesheet" href="/static/css/cart.css"> -->
+
+    <!-- Bootstrap/js/popper -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/eafbf77353.js"></script>
+
+
+</head>
+
+<body>
+    <section class="h-100 gradient-form" style="background-color: white">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6 ">
+                                <div class="card-body p-md-5 mx-md-4" style="background-color: #E5E5E5; height: 30rem ">
+
+                                    <div class="card" style="height: 20rem;">
+                                        <img src="{%static '/image/'%}{{products.product_image}}" alt=""
+                                            style="width: 100px; height: 100px;">
+                                        <h1 style="color: #5f1616; font-size: small;text-align: center;">
+                                            {{products.product_name}}</h1>
+                                        <p style="color: black; font-size: small; text-align: center;" class="price">
+                                            {{products.product_price}}</p>
+
+                                        <p> <a href="/logout/"><button class="btn btn-outline-success my-2 my-sm-0">Buy
+                                                    Now</button></a>
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center " style="background-color: #0d6efd;">
+                                <div class="text-white px-0 py-0 p-md-5 mx-md-4">
+                                    <form class="container my-5" method="POST" action="" enctype="multipart/form-data">
+                                        {% csrf_token%}
+
+                                        <div class="form-outline mb-0">
+                                            <label for="exampleInputEmail1" class="form-label">ID</label>
+                                            <input type="text" class="form-control" value={{products.product_id}}
+                                                name="pproduct" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div>
+                                            <label for="exampleInputEmail1" class="form-label">Name</label>
+                                            <input type="text" class="form-control" placeholder="Email Address"
+                                                name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+
+
+                                        <div class="form-outline mb-0">
+                                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                            <input type="text" class="form-control" placeholder="Email Address"
+                                                name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+
+                                        <div class="form-outline mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Phonenumber</label>
+                                            <input type="text" class="form-control" placeholder="phonenumber"
+                                                name="phonenumber" id="exampleInputPassword1">
+                                        </div>
+
+                                        <div class="form-outline mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Address</label>
+                                            <input type="text" class="form-control" placeholder="address" name="address"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        
+                                        <a href="/products/">
+                                            <button class="btn2 btn-primary" type="submit">Submit</button>
+                                        </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
